@@ -1,4 +1,14 @@
 <!--pages/load/load.wxml-->
 <!-- 需要使用 button 来授权登录 -->
-<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
-<view wx:else>请升级微信版本</view>
+<view class="load">
+  <open-data type="userAvatarUrl" class= 'img' ></open-data>
+  <view class="message">
+  <text style='font-weight:600'>申请获取以下权限</text>
+  <text style='color:gray'>获取你的公开信息(昵称、头像等)</text>
+  </view>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="font-size:34rpx;  width: 600rpx;  border-radius: 40rpx;">授权登录</button>
+  <view wx:else>请升级微信版本</view>
+  <view class="l_login" bindtap="login">
+    注册登陆
+  </view>
+</view>

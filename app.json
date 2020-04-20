@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/load/load",
+    "pages/index/index",
+
     "pages/login/login",
     "pages/sign/sign",
+    "pages/bottom/bottom",
     "pages/main/main",
     "pages/commit/commit",
-    "pages/bottom/bottom",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
@@ -14,6 +15,31 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "#bbcfe2",
+    "selectedColor": "#4f5a7a",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/main/main",
+      "text": "广场",
+      "iconPath": "pages/images/land.png",
+      "selectedIconPath": "pages/images/land-dot.png"
+    }, 
+    {
+      "pagePath": "pages/commit/commit",
+      "iconPath": "pages/images/add.png",
+      "selectedIconPath": "pages/images/add.png",
+      "text":" 发表"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "pages/images/mine.png",
+      "selectedIconPath": "pages/images/mine-dot.png"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,13 +1,22 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<!--pages/index/index.wxml-->
+<view class="m_content" >
+<dialog bind:dealpage="confirm" title='{{title}}' wx:if='{{toast}}' bind:cancel='cancel'></dialog>
+<wxs src="../../utils/util.wxs" module ="util"/>
+    <view class="m_admin">
+      <image src="{{user.user_img}}"></image>
+      <text>{{user.user_name}}</text>
+    </view>
+  <view class="m_list" wx:for="{{articalList}}">
+    <view class="m_message">
+     {{item.text}}
+  <text style="color:gray">
+  {{util.formatTime( item.c_time)}}
+  </text>
+      </view>
+      <view class="m_approve">
+        <image src="../images/cancel.png" class="approve_img"> </image>
+        <text wx:if='{{util.formatString(item.likes)>0}}'>{{util.formatString(item.likes)}}</text>
+        <text class="button" bindtap="delete" data-id="{{item.page_id}}">删除</text>
+      </view>
   </view>
 </view>

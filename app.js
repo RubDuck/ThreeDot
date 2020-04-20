@@ -1,4 +1,12 @@
 //app.js
+import Http from './base/http'
+
+const SID = 'sid';
+const APPID = 'wx722ddd834db4e87c'
+const secret = 'db87a87f3829aa35f1ca8d448e1696dd'
+var url =`https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=refresh_token`
+
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -9,6 +17,12 @@ App({
     // 登录
     wx.login({
       success: res => {
+        wx.request({
+          url: `https://api.weixin.qq.com/sns/jscode2session?appid=${APPID}&secret=${secret}&js_code=${res.code}&grant_type=refresh_token`,
+          success(res){
+        
+          }
+        })
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
@@ -33,7 +47,18 @@ App({
       }
     })
   },
+  toNextpage(url,method='switchTab'){
+    wx[method]({
+      url: url
+    })
+  },
+  showToast(text){
+    wx.showToast({
+      title: text,
+      icon: 'none'
+    })
+  },
   globalData: {
-    userInfo: null
+    userInfo:null
   }
 })

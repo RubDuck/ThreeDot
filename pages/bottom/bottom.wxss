@@ -1,1 +1,12 @@
 /* pages/bottom/bottom.wxss */
+.b_main{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+image{
+  display: block;
+  height: 80rpx;
+  width: 80rpx;
+}

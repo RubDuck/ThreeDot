@@ -1,2 +1,5 @@
 <!--pages/commit/commit.wxml-->
-<text>pages/commit/commit.wxml</text>
+<view class="commit">
+<textarea placeholder="发条树洞吧~"  placeholder-style='font-size:32rpx;' model:value='{{text}}'/>
+<button style="font-size:30rpx;width:500rpx;font-weight:400" bindtap="sendMessage"> 发表</button>
+</view>

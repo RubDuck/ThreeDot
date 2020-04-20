@@ -1,2 +1,9 @@
 <!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view>
+<input placeholder="用户名" model:value="{{name}}"></input>
+<input placeholder="手机号" model:value="{{phone}}" type="number"></input>
+<input placeholder="登陆密码" model:value="{{password}}"></input>
+<input placeholder="确认密码" model:value="{{repassword}}"></input>
+<button style="width:670rpx;font-size:24rpx;" bindtap="login">注册</button>
+<text bindtap="enter" >已有账号，点击登陆</text>
+</view>

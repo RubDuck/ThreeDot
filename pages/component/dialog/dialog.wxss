@@ -1,0 +1,44 @@
+.dia{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  background:  rgba(0,0,0,.5);
+  z-index: 100;
+}
+.dialog{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%,-50%);
+  z-index: 1000;
+}
+.toast{
+  display: flex;
+  flex-direction: column;
+  height: 400rpx;
+  width: 600rpx;
+  border-radius: 25rpx;
+  background: white;
+}
+.t_title{
+  height: 300rpx;
+  line-height: 300rpx;
+  text-align: center;
+  border-bottom: 1px solid #eee8e8;
+}
+.t_button{
+  display: flex;
+}
+.b_cancel{
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+  border-right: 1px solid  #eee8e8;
+}
+.b_ok{
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+  color: green;
+}

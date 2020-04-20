@@ -1,2 +1,8 @@
 <!--pages/sign/sign.wxml-->
-<text>pages/sign/sign.wxml</text>
+<view>
+<input placeholder="手机号" model:value='{{user}}'></input>
+<input placeholder="登陆密码" model:value='{{password}}'></input>
+<button style="width:670rpx;font-size:24rpx;" bindtap="enter">登陆</button>
+<text bindtap="login" >还没有账号？点我注册</text>
+</view>
+

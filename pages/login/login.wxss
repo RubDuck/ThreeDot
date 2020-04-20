@@ -1,1 +1,18 @@
 /* pages/login/login.wxss */
+input{
+  margin: 20rpx 40rpx;
+  padding: 16rpx;
+  font-size: 24rpx;
+  background: #f8f8f8;
+}
+button{
+  margin: 40rpx 0;
+  background: red;
+  color: white;
+}
+text{
+  margin: 40rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+
+}

@@ -1,13 +1,39 @@
 // pages/sign/sign.js
+
+import Http from '../../base/http'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    user:'',
+    password:''
   },
-
+  login(){
+    wx.navigateBack({
+      delta:1
+    })
+  },
+  enter(){
+    let that = this
+    Http.request({
+      data:{
+        user:that.data.user,
+        password:that.data.password
+      },
+      url:'/sign',
+    }).then(e=>{
+      getApp().showToast(e.data.msg)
+      if(e.data.code == 0){
+        wx.setStorageSync('sid', e.data.data)
+        setTimeout(function(){
+          getApp().toNextpage('/pages/main/main')
+        },1000)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

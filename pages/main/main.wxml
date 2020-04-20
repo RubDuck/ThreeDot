@@ -1,2 +1,21 @@
 <!--pages/main/main.wxml-->
-<text>pages/main/main.wxml</text>
+
+<view class="m_content">
+<wxs src="../../utils/util.wxs" module ="util"/>
+<view class="m_list" wx:for="{{articalList}}">
+  <view class="m_main">
+    <image src="{{item.user_img}}" class="head_img"></image>
+    <view class="m_mine">
+      <text class="m_mineName">{{item.name}}</text>
+      <text class="m_mineTime">{{util.formatTime( item.c_time) }}</text>
+    </view>
+  </view>
+  <view class="m_message">
+    {{item.text}}
+    </view>
+    <view class="m_approve">
+      <image src="../images/cancel.png" class="approve_img" bindtap="approve" data-id ='{{item}}'> </image>
+      <text wx:if='{{util.formatString(item.likes)>0}}' >{{util.formatString(item.likes)}}</text>
+    </view>
+</view>
+</view>

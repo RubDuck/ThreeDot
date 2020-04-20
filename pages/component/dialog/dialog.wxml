@@ -1,0 +1,11 @@
+<view class="dia">
+<view class="dialog">
+  <view class="toast">
+    <text class="t_title"> {{title}} </text>
+    <view  class="t_button">
+      <text class="b_cancel" bindtap="cancel">取消</text>
+      <text class="b_ok" bindtap="confirm">确定</text>
+    </view>
+  </view>
+</view>
+</view>

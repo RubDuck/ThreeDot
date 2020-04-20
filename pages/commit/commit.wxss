@@ -1,1 +1,16 @@
 /* pages/commit/commit.wxss */
+.commit{
+  height: 100vh;
+  background: #f8f8f8;
+}
+textarea{
+  height: 400rpx;
+  width: 100%;
+  padding: 20rpx;
+  margin-bottom: 60rpx;
+  background:white; 
+}
+button{
+  background: red;
+  color: white;
+}

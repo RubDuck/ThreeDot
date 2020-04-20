@@ -1,1 +1,54 @@
 /* pages/main/main.wxss */
+.m_content{
+  height: 100vh;
+  background: #f8f8f8; 
+}
+.m_list{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 30rpx;
+  background: white;
+  margin-bottom: 20rpx;
+}
+.m_main{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+
+}
+.m_mine{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.m_mineTime{
+  color: gray;
+}
+.m_mineName{
+  line-height: 60rpx;
+  color:blue
+}
+.head_img{
+  display: inline-block;
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 20rpx;
+}
+.m_message{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #dfd4d4;
+}
+.m_approve{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+}
+.approve_img{
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 10rpx;
+}

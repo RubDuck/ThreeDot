@@ -1,2 +1,6 @@
 <!--pages/bottom/bottom.wxml-->
-<text>pages/bottom/bottom.wxml</text>
+<view class="b_main">
+<text bindtap="select">广场</text>
+<image src="../images/add.png"></image>
+<text bindtap="select">我的</text>
+</view>

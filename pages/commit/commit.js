@@ -1,11 +1,27 @@
 // pages/commit/commit.js
+import Http from '../../base/http'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    text:''
+  },
+  sendMessage(){
+    let params = wx.getStorageSync('sid')
+    params.text = this.data.text
+    Http.request({
+      url:'/commit',
+      data:params
+    }).then(e=>{
+      getApp().showToast(e.data.msg)
+      if(e.data.code==0){
+        getApp().toNextpage('/pages/main/main')
+      }
+    })
+    console.log(wx.getStorageSync('sid'))
   },
 
   /**
